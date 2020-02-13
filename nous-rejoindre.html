@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ENTREPRISE MADERA</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/library.js"></script>
+  </head>
+  <body>
+    <header>
+        <nav>
+          <h1>
+            Bienvenue sur le site web de l'entreprise MADERA
+        </h1>
+        </nav>
+      </header>
+      <img src="img/logomadera.png" class="center">
+      <div >
+        <article>
+            <header>
+
+              <h2>Nous rejoindre</h2>
+                <div>
+                    <form action="#" method="post">
+                        <div>
+                            <label for="name">Nom :</label>
+                            <input type="text" id="name" name="user_name">
+                        </div>
+                        <div>
+                            <label for="name">Prénom :</label>
+                            <input type="text" id="firstname" name="user_firstname">
+                        </div>
+                        <div>
+                            <label for="mail">e-mail :</label>
+                            <input type="email" id="mail" name="user_mail">
+                        </div>
+                        <div>
+                            <label for="msg">Lettre de motivation :</label>
+                            <textarea id="msg" name="user_motiv"></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit" id="submitButton" onclick="sumbitButtonOnClick()">Envoyer le message</button>
+                        </div>
+                    
+                    </form>
+                </div>
+            </header>
+            <p><a href="index.html">Retour à la page précédente…</a></p>
+        </article>
+      <footer class="footer-class">
+        <p><a href="mailto:nullepart@mozilla.org">Contactez-nous</a></p>
+        <p>Propulsé par © 2020 Benoit Rousseaux</p>
+    </footer>
+  </body>
+</html>
