@@ -81,7 +81,7 @@ body a{
   background-color: #016029;
   height: 2px;
 }
-.listnav img{
+#listnav img{
   margin-left: auto;
   margin-right: auto;
   width: 20vw;
@@ -143,7 +143,7 @@ nav ul{
   list-style: none;
 
 }
-.listnav{
+#listnav{
   display: none;
 }
 #app_burger_menu a:hover{
@@ -198,28 +198,28 @@ nav ul{
 #app_burger_menu{
     display: none;
   }
-.listnav{
+#listnav{
     text-align: center;
     display: inline-block;
     width:100%;
   }
-.listnav a:link{
+#listnav a:link{
     color:#745f4c;
     text-decoration: none;
   }
-  .listnav a:visited{
+  #listnav a:visited{
     color:#745f4c;
     text-decoration: none;
   }
-  .listnav a{
+  #listnav a{
     position: relative;
     color: #745f4c;
     text-decoration: none;
   }
-  .listnav a:hover{
+  #listnav a:hover{
     color: #745f4c;
   }
-  .listnav a:before{
+  #listnav a:before{
     content: "";
     position: absolute;
     width: 100%;
@@ -233,7 +233,7 @@ nav ul{
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
   }
-  .listnav a:hover:before{
+  #listnav a:hover:before{
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
