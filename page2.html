@@ -8,16 +8,41 @@
   <body>
     <header>
       <nav>
-        <h1>
-          Bienvenue sur le site web de l'entreprise MADERA
-      </h1>
+        <div id="app_burger_menu">
+          <img  src="img/menu.png" v-on:click="cloak" class="logoBurMen">
+          <template v-if="isActive=='True'">
+            <ul>
+                <li><a href="index.html" >ACCEUIL</a></li>
+                <li><a href="#paragraphe" >L'ENTREPRISE</a></li>
+                <li><a href="nous-rejoindre.html">NOUS REJOINDRE</a></li>
+            </ul>
+          </template>
+        </div>
+
+        <div class="listnav">
+          <div>
+            <img src="img/logo.png" class="logo">
+          </div>
+          <div >
+            <ul>
+                <li><a href="index.html" >ACCEUIL</a></li>
+                <li><a href="#paragraphe" >L'ENTREPRISE</a></li>
+                <li><a href="#">CONTACTEZ-NOUS</a></li>
+                <li><a href="#">NOUS REJOINDRE</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+
       </nav>
     </header>
+    <div class="separation">
 
-      <img src="img/logomadera.png" class="center">
-      <div >
+    </div>
+      <div>
         <article>
-            <header>
+            <div id="qsn">
 
               <h2>Qui sommes-nous ?</h2>
                 <div>
@@ -26,13 +51,13 @@
                         La structure de chaque maison modulaire est un assemblage dit de « structure porteuse bois ». La qualité de chacun des modules d’assemblage est testée et vérifiée dans le respect des règles de l’art et des normes en vigueur. Toutes les maisons modulaires produites par l’entreprise Madera respectent la norme HQE (Haute Qualité Environnementale).
                         L’année passée, le Groupe a réalisé un chiffre d’affaire de 200 millions d’euros et vendu 146 maisons modulaires (15% du CA réalisé).
                     </p>
+
+                      <p><a href="index.html">Retour à la page précédente…</a></p>
+
+
                 </div>
-            </header>
-            <p><a href="index.html">Retour à la page précédente…</a></p>
+            </div>
+
         </article>
-      <footer class="footer-class">
-        <p><a href="mailto:nullepart@mozilla.org">Contactez-nous</a></p>
-        <p>Propulsé par © 2020 Benoit Rousseaux</p>
-    </footer>
   </body>
 </html>

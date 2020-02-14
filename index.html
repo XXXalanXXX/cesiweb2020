@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <meta charset="UTF-8">
     <title>ENTREPRISE MADERA</title>
     <link rel="stylesheet" href="css/style.css" />
@@ -8,58 +9,67 @@
   <body>
       <header>
         <nav>
-          <div class="burgermenu">
-            <img src="img/menu.png" class="logoBurMen">
+          <div id="app_burger_menu">
+            <img  src="img/menu.png" v-on:click="cloak" class="logoBurMen">
+            <template v-if="isActive=='True'">
+              <ul>
+                  <li><a href="index.html" >ACCEUIL</a></li>
+                  <li><a href="#paragraphe" >L'ENTREPRISE</a></li>
+                  <li><a href="nous-rejoindre.html">NOUS REJOINDRE</a></li>
+              </ul>
+            </template>
           </div>
+
           <div class="listnav">
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Qui sommes nous?</a></li>
-                <li><a href="#">Contactez-nous!</a></li>
-                <li><a href="#">Nous rejoindre</a></li>
-            </ul>
+            <div>
+              <img src="img/logo.png" class="logo">
+            </div>
+            <div >
+              <ul>
+                  <li><a href="index.html" >ACCEUIL</a></li>
+                  <li><a href="#paragraphe" >L'ENTREPRISE</a></li>
+                  <li><a href="nous-rejoindre.html">NOUS REJOINDRE</a></li>
+              </ul>
+            </div>
+
           </div>
 
 
         </nav>
       </header>
       <main>
-        <div class="entete">
-          <img src="img/logomadera.png" class="logo">
-          <h1>  Bienvenue sur le site web de l'entreprise MADERA </h1>
-        </div>
+        <div class="separation">
 
+        </div>
+          <div id="app_panel">
+              <projet-item
+                v-for="item in typeProjet"
+                v-bind:projet="item"
+                >
+              </projet-item>
+
+          </div>
         <div>
+          <div class="separation">
+
+          </div>
           <article>
-            <ul id="navigation">
+            <ul id="paragraphe">
               <li class="qsn">
                 <h2>Qui sommes-nous ?</h2>
                 <div >
                   <p>
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                   totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                   voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                   sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-                   veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-                   Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
-                   dolorem eum fugiat quo voluptas nulla pariatur?
+
                 </p>
                 <p>
                     At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos
-                    dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
-                    mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore,
-                    cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
-                    est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
-                    voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-                    voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+
                 </p>
                   <p>Publié le <time datetime="2020-01-13">13 janvier 2020</time> par Benoit Rousseaux</p>
                 </header>
                 <p><a href="page2.html">Poursuivre la lecture…</a></p>
-              </li>
-              <li class="bordereau">
-                <img src="img/téléchargement.jfif" alt="#">
               </li>
               <li class="nr">
                 <h2>Nous rejoindre ?</h2>
@@ -78,9 +88,6 @@
         </div>
       </div>
       </main>
-      <footer class="footer-class">
-        <p><a href="mailto:nullepart@mozilla.org">Contactez-nous</a></p>
-        <p>Propulsé par © 2020 Benoit Rousseaux</p>
-    </footer>
   </body>
+  <script src="js/script.js"></script>
 </html>
